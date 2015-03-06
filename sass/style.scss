@@ -1,6 +1,366 @@
 @import "compass/reset";
 @import "compass/css3";
 
+@import "compass/utilities/general/clearfix";
+@import "icomoon";
+
+$bg-color: #eeeeee;
+$text-color: #333333;
+$hero-bg-color: #35B8CD;
+$hero-text-color: #ffffff;
+
+
+@mixin font-smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+$break-small: 320px;
+$break-large: 1024px;
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+
+@mixin section-title() {
+	font-size: 2em;
+	text-transform: uppercase;
+	color: $hero-bg-color;
+	padding: 2em 0;
+
+	&:after {
+		content: "";
+		display: block;
+		background-color: #cccccc;
+		width: 2em;
+		height: .2em;
+		margin: .4em auto;
+	}	
+}
+
+a {
+	text-decoration: none;
+	color: $hero-bg-color;
+}
+
 body {
+	font-family: "Open Sans", "Microsoft YaHei", "Hiragino Sans GB", "Hiragino Sans GB W3", "微软雅黑", "Helvetica Neue", Arial, sans-serif;
 	font-size: 62.5%;
+	text-align: center;
+	max-width: 1400px;
+	color: $text-color;
+	line-height: 1.4;
+	@include font-smoothing;
+}
+
+.hero {
+	background-color: $hero-bg-color;
+	width: 100%;
+	margin: 0 auto;
+
+	position: relative;
+	z-index: 1;
+
+	&:after {
+		background: url('/images/cover-resized.png');
+		background-size: cover;
+		position: absolute;
+		content: "";
+		z-index: -1;
+		opacity: .2;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	.button {
+		display: inline-block;
+		position: absolute;
+		top: 2em;
+		right: 2em;
+		text-decoration: none;
+		border-radius: 2px;
+		color: white;
+		border: 1px solid white;
+		padding: .5em 1em;
+		transition: all ease-in-out .2s;
+		font-size: 1.5em;
+
+		&:hover {
+			color: $hero-bg-color;
+			background-color: white;
+		}
+	}
+
+	h1 {
+		font-size: 6em;
+		font-weight: bold;
+		padding: 1em 10% 0 10%;
+		color: $hero-text-color;
+	}
+
+	p {
+		font-size: 2em;
+		padding: 1em 16%;
+		color: $hero-text-color;
+	}
+
+	padding: 24em 0 10em 0;
+}
+
+.features {
+	width: 100%;
+	padding: 6em 0 10em 0;
+	
+	h2 {
+		font-size: 2em;
+		padding: 1em 0;
+		@include section-title;
+	}
+
+	ul {
+		li {
+			float: left;
+			width: 33.33%;
+			box-sizing: border-box;
+			padding: 1em 2em;
+
+			.feature {
+				h3 {
+					font-size: 2em;
+					padding: 1em 0;
+					font-weight: bold;
+				}
+
+				p {
+					font-size: 1.5em;
+					padding: 0 2em;
+				}
+
+				i {
+					font-size: 3em;
+				}
+			}
+		}
+		@include clearfix;
+	}
+
+}
+
+.download {
+	background-color: #E4E4E4;
+	padding: 6em 0;
+
+	h2 {
+		font-size: 2em;
+		padding: 1em 0;
+		@include section-title;
+	}
+
+	ul {
+		li {
+			float: left;
+			width: 50%;
+			box-sizing: border-box;
+			
+			@include respond-to(handhelds) {
+				float: none;
+				width: 100%;
+			}
+
+			@include respond-to(medium-screens) {
+				float: none;
+				width: 100%;
+			}
+
+			.sample {
+				width: 90%;
+				margin: 0 auto;
+
+				img {
+					width: 100%;
+					margin-bottom: 1em;
+					/*transition: all ease-in-out .2s;*/
+					&:hover {
+						opacity: .7;
+					}
+				}	
+
+				a {
+					text-decoration: none;
+					color: $hero-bg-color;
+					font-size: 1.5em;
+					display: inline-block;
+					padding: 1em 0;
+				}
+
+				p {
+					padding: 0 16% 1em 16%;
+				}
+			}
+		}
+		@include clearfix;
+	}
+}
+
+.samples {
+	padding: 6em 0 0 0;
+	background-color: #F5F5F5;
+
+	h2 {
+		font-size: 2em;
+		padding: 1em 0;
+		@include section-title;
+	}
+
+	.bgwrapper:nth-child(odd) {
+		background-color: #E4E4E4;
+	}
+
+	.first .sample {
+		padding-top: 0;
+	}
+
+	.sample {
+		width: 80%;
+		margin: 0 auto;
+		padding: 10em 0;
+
+		img {
+			width: 100%;
+		}
+
+		h3 {
+			font-size: 2em;
+			padding: 0 0 1em 0;
+		}
+
+		p {
+			padding: 0 4em;
+		}
+	}
+}
+
+.what-people-say {
+	width: 80%;
+	margin: 0 auto;
+	padding: 6em 0;
+
+	h2 {
+		@include section-title;
+	}
+
+	.story {
+		p {
+			font-size: 1.5em;
+			padding: 0 0 1em 0;
+		}
+
+		.name {
+			font-size: 1.5em;
+			font-weight: bold;
+		}
+
+		.title {
+			padding: 1em 0 0 0;
+			font-style: italic;
+		}
+	}
+
+	.avatar {
+		width: 50px;
+		height: 50px;
+		margin: 2em auto;
+		border-radius: 100%;
+		border: 2px solid #cccccc;
+		overflow: hidden;
+
+		@include box-shadow(0 0 5px $hero-bg-color);
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.indicator {
+		margin: 0 auto;
+		display: inline-block;
+		text-align: center;
+
+		li {
+			float: left;
+			width: 33.33%;
+
+			width: 10px;
+			height: 10px;
+			border: 1px solid $hero-bg-color;
+			@include border-radius(100%);
+			cursor: pointer;
+			margin: .5em;
+		}
+		@include clearfix;
+
+		.active {
+			background-color: $hero-bg-color;
+		}
+	}
+}
+
+footer {
+	padding: 1em 0;
+	background-color: $hero-bg-color;
+	color: $hero-text-color;
+	position: relative;
+
+	p {
+		font-size: 1.5em;
+		padding: 1em 0;
+	}
+
+	.contact {
+		position: absolute;
+		right: 0;
+		top: 0;
+		ul {
+			li {
+				float: left;
+				width: 25%;
+				height: 4em;
+				font-size: 2em;
+
+				a {
+					text-decoration: none;
+					color: $hero-text-color;
+					display: inline-block;
+					padding: 1.5em;
+					transition: all ease-in-out .5s;
+
+					&:hover {
+						color: $hero-bg-color;
+						background-color: $hero-text-color;
+					}
+				}
+
+			}
+
+			@include clearfix;
+		}		
+	}
+
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Design</title>
+	<title>轻量级Web应用开发</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 	<!--[if IE]>
@@ -9,14 +9,123 @@
 	<![endif]-->
     <link href="stylesheets/style.css" type="text/css" rel="stylesheet" >
 </head>
-<body>
-	
-	<h1>hello, world</h1>
-	<h1>你好，世界</h1>
 
-	<section>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, mollitia. Praesentium earum sequi sit eius impedit, id consequatur voluptate labore numquam? Placeat vero inventore cupiditate natus, temporibus, voluptates qui necessitatibus?</p>
+<body>
+	<section class="hero">
+		<a class="button" href="#samples">样章下载</a>
+		<h1>轻量级Web应用开发</h1>
+
+		<p>这本书会教会你如何将一个想法变成一个实际的产品。从高效的编程工具，开发流程，到敏捷开发中的轻量级实践，再到一个从零开始开发一个具体而微的实例。</p>
+	</section>
+	
+	<section class="features">
+		<h2>本书特点</h2>
+		<ul>
+			<li>
+				<div class="feature">
+					<i class="icon-wrench"></i>
+					<h3>开发流程</h3>
+					<p>本书中涉及了现代的，高效的工作方式，学会这些工具和技巧，可以是你的开发效率大大提升</p>
+				</div>
+			</li>
+			<li>
+				<div class="feature">
+					<i class="icon-circle-o-notch"></i>
+					<h3>全生命周期</h3>
+					<p>软件开发不只是写程序，构建，自动化测试，部署等都是开发的一部分。本书会告诉你如何快速而高效的完成这些任务。</p>
+				</div>
+			</li>
+			<li>
+				<div class="feature">
+					<i class="icon-quill"></i>
+					<h3>实例贯穿</h3>
+					<p>书中不但在每个章节中有一些小的例子，还专门开辟出三章来将这些知识点连接起来，使你更容易学以致用。</p>
+				</div>
+			</li>
+		</ul>
 	</section>
 
+	<section class="samples">
+		<h2>书中实例</h2>
+		<div class="bgwrapper first">
+			<div class="sample">
+				<img src="images/command-line.png">
+				<h3>如何使用命令行</h3>
+				<p>命令行是高效程序员最好的朋友，通过搭积木使得组合，可以让独立的小程序发挥出极大的威力，命令行还是自动化的前提。通过管道，命令行程序可以互相配合，从而完成复杂的任务。</p>
+			</div>	
+		</div>
+
+		<div class="bgwrapper">
+			<div class="sample">
+				<img src="images/snap-ci.png" alt="">
+				<h3>持续集成</h3>
+				<p>及时地将软件的不同部分集成在一起在实际项目中至关重要，持续集成环境可以促进你做到这一点。时刻保持一个可用的版本对于商业产品来说至关重要。<a href="http://www.thoughtworks.com/">ThoughtWorks</a>出品的Snap是一个轻量级的CI服务器，它可以很容易的与Github集成。</p>
+			</div>	
+		</div>		
+
+		<div class="bgwrapper">
+			<div class="sample">
+				<img src="images/qipa-proto.png" alt="">
+				<h3>奇葩网</h3>
+				<p>从头搭建一个实际的应用程序会遇到很多问题，但是在解决问题的过程中可以学习到很多的额外知识。奇葩网是一个集成了前后端很多小巧轻量的工具的应用，其中涉及了<a href="https://angularjs.org/">Angular.js</a>，<a href="http://getbootstrap.com/">Bootstrap</a>，<a href="http://www.sinatrarb.com/">Sinstra</a>，<a href="https://www.heroku.com/">Heroku</a>平台等众多工具和框架的使用。</p>
+			</div>	
+		</div>
+
+	</section>
+
+	<section class="download" id="samples">
+		<h2>样章下载</h2>
+		<ul>
+			<li>
+				<div class="sample">
+					<img src="images/todoify.png">
+					<a href="#">第6章：现代的前端开发⽅式</a>
+					<p>
+						本章讲解如何使用TDD的方式进行前端的JavaScript开发，从任务划分到逐步增强，从头到尾开发一个jQuery的插件。整个过程中会学习很多现代前端开发的工具和工作流程，比如Karma的使用，Jasmine测试框架的使用等。
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="sample">
+					<img src="images/karma.png">
+					<a href="#">第7章：可测试的JavaScript代码</a>
+					<p>优秀的程序员不会满足于仅仅将目标设置为“完成任务”，他们会更关注扩展性，易用性，可测试性等等方面，这一章从一个实例出发，学习如何从不同的方面思考并解决同一个问题。并学习如何编写可维护的代码。</p>
+				</div>
+			</li>
+		</ul>
+	</section>
+
+	<section class="what-people-say">
+		<h2>用户故事</h2>
+		
+		<div class="story">
+			<p>本书通过大量实例介绍了轻量级web开发的方方面面，思路清晰，通俗易读，非常适合初学者。</p>
+			<div class="name">贾玮</div>
+			<div class="title">ThoughtWorks 2014 毕业生</div>	
+			<div class="avatar">
+				<img src="images/jiawei-avator.jpg" alt="">
+			</div>
+		</div>
+		
+		<ol class="indicator">
+			<li class="dot active"></li>
+			<li class="dot"></li>
+			<li class="dot"></li>
+		</ol>
+
+	</section>
+
+	<footer>
+		<p>Copyright @  邱俊涛 2015</p>
+
+		<div class="contact">
+			<ul>
+				<li><a href="mailto:juntao.qiu@gmail.com" class="social icon-email"></a></li>
+				<li><a href="http://www.weibo.com/juntaoq" class="social icon-sina-weibo"></a></li>
+				<li><a href="skype:juntao.qiu" class="social icon-skype"></a></li>
+				<li><a href="http://icodeit.org/about-me/" class="social icon-user"></a></li>
+			</ul>	
+		</div>
+	</footer>
 </body>
 </html>
