@@ -339,7 +339,7 @@ body {
 }
 /* line 78, ../sass/style.scss */
 .hero:after {
-  background: url("images/cover-resized.png");
+  background: url("../images/cover-resized.png");
   background-size: cover;
   position: absolute;
   content: "";

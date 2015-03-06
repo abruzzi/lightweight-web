@@ -76,7 +76,7 @@ body {
 	z-index: 1;
 
 	&:after {
-		background: url('images/cover-resized.png');
+		background: url('../images/cover-resized.png');
 		background-size: cover;
 		position: absolute;
 		content: "";
