@@ -140,6 +140,18 @@ body {
 			box-sizing: border-box;
 			padding: 1em 2em;
 
+			@include respond-to(handhelds) {
+				float: none;
+				width: 100%;
+				padding-bottom: 2em;
+			}
+
+			@include respond-to(medium-screens) {
+				float: none;
+				width: 100%;
+				padding-bottom: 2em;
+			}
+
 			.feature {
 				h3 {
 					font-size: 2em;
@@ -149,7 +161,7 @@ body {
 
 				p {
 					font-size: 1.5em;
-					padding: 0 2em;
+					padding: 0 10%;
 				}
 
 				i {
@@ -339,6 +351,15 @@ footer {
 		position: absolute;
 		right: 0;
 		top: 0;
+
+		@include respond-to(medium-screens) {
+			position: static;
+		}
+
+		@include respond-to(handhelds) {
+			position: static;
+		}
+
 		ul {
 			li {
 				float: left;
