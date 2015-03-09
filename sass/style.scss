@@ -37,10 +37,10 @@ $break-large: 1024px;
 }
 
 @mixin section-title() {
-	font-size: 2em;
+	font-size: 3em;
 	text-transform: uppercase;
 	color: $hero-bg-color;
-	padding: 2em 0;
+	padding: 1em 0;
 
 	&:after {
 		content: "";
@@ -120,7 +120,7 @@ body {
 		color: $hero-text-color;
 	}
 
-	padding: 24em 0 10em 0;
+	padding: 8em 0;
 }
 
 .features {
@@ -156,12 +156,13 @@ body {
 				h3 {
 					font-size: 2em;
 					padding: 1em 0;
-					font-weight: bold;
 				}
 
 				p {
-					font-size: 1.5em;
+					font-size: 1.2em;
 					padding: 0 10%;
+					font-weight: lighter;
+					color: #666666;
 				}
 
 				i {
@@ -214,15 +215,17 @@ body {
 				}	
 
 				a {
-					text-decoration: none;
-					color: $hero-bg-color;
+					text-decoration: underline;
+					color: #333333;
 					font-size: 2em;
 					display: inline-block;
 					padding: 1em 0;
 				}
 
 				p {
-					font-size: 1.5em;
+					font-size: 1.2em;
+					color: #666666;
+					font-weight: lighter;
 					padding: 0 5% 1em 5%;
 				}
 			}
@@ -241,10 +244,6 @@ body {
 		@include section-title;
 	}
 
-	.bgwrapper:nth-child(odd) {
-		background-color: #E4E4E4;
-	}
-
 	.first .sample {
 		padding-top: 0;
 	}
@@ -252,7 +251,7 @@ body {
 	.sample {
 		width: 80%;
 		margin: 0 auto;
-		padding: 10em 0;
+		padding: 4em 0;
 
 		img {
 			width: 100%;
@@ -264,7 +263,9 @@ body {
 		}
 
 		p {
-			font-size: 1.5em;
+			font-size: 1.2em;
+			font-weight: lighter;
+			color: #666666;
 			padding: 0 4em;
 		}
 	}
