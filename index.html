@@ -8,6 +8,8 @@
 	    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
     <link href="stylesheets/style.css" type="text/css" rel="stylesheet" >
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/app.js"></script>
 </head>
 
 <body>
@@ -98,19 +100,28 @@
 	<section class="what-people-say">
 		<h2>用户故事</h2>
 		
-		<div class="story">
-			<p>本书通过大量实例介绍了轻量级web开发的方方面面，思路清晰，通俗易读，非常适合初学者。</p>
+		<div class="story" id="story-1">
+			<p>本书包含了轻量级web开发的方方面面，通过大量实例展示了一个现代的Web应用从想法到实现所经历的代码开发、本地构建、持续集成、自动化测试、发布等全过程，并介绍了很多提高开发效率的框架和工具，文笔流畅，思路清晰，通俗易读，非常适合初学者。</p>
 			<div class="name">贾玮</div>
-			<div class="title">ThoughtWorks 2014 毕业生</div>	
+			<div class="title">ThoughtWorks 咨询师</div>	
 			<div class="avatar">
 				<img src="images/jiawei-avator.png" alt="">
 			</div>
 		</div>
 		
+		<div class="story" id="story-2">
+			<p>俊涛在本书中亮出了全栈工程师的本色，将各种高效的开发工具、Web应用服务器、数据库访问工具、客户端框架、CSS框架、客户端测试框架、持续集成和应用发布的绝技一一道来。这是一本没有提“全栈”的全栈Web应用开发的武功秘籍。</p>
+			<div class="name">伍斌</div>
+			<div class="title">创办bjdp.org编程操练社区，《驯服烂代码》一书作者</div>	
+			<div class="avatar">
+				<img src="images/wubin-avator.png" alt="">
+			</div>
+		</div>
+
 		<ol class="indicator">
-			<li class="dot active"></li>
-			<li class="dot"></li>
-			<li class="dot"></li>
+			<li class="dot active" href="story-1"></li>
+			<li class="dot" href="story-2"></li>
+			<li class="dot" href="story-1"></li>
 		</ol>
 
 	</section>
